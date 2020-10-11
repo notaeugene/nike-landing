@@ -1,0 +1,84 @@
+$navItemLineHeight: 34px;
+
+.root {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100px;
+    padding-left: 80px;
+    padding-right: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 10px 24px 0 rgba($color: #000, $alpha: 0.2);
+}
+
+.appLogo {
+    width: 90px;
+}
+
+.shapeSvg {
+    width: 500px;
+    position: absolute;
+    top: -150px;
+    left: -10px;
+    z-index: -1;
+    opacity: 0.33;
+}
+
+.navList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.navItem {
+    height: $navItemLineHeight;
+    overflow: hidden;
+
+    &:hover {
+        .navLinkDefault,
+        .navLinkHover {
+            @extend %navLinkHover
+        }
+    }
+
+    &:not(:last-child) {
+        margin-right: 60px;
+    }
+}
+
+.navItemActive {
+    background-color: #E3E3E3;
+
+    .navLinkDefault,
+    .navLinkHover {
+        @extend %navLinkActive;
+    }
+}
+
+%navLink {
+    display: block;
+    color: #000;
+    font-family: 'PT Mono', monospace;
+    font-weight: bold;
+    padding: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: transform 0.8s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+%navLinkActive {
+    color: #676767;
+}
+
+%navLinkHover {
+    transform: translateY(-$navItemLineHeight);
+}
+
+.navLinkDefault,
+.navLinkHover {
+    @extend %navLink;
+}

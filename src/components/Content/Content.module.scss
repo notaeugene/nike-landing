@@ -1,0 +1,42 @@
+.root {
+    padding-left: 80px;
+}
+
+.productName {
+    margin-bottom: 3rem;
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: 0.5rem;
+    white-space: nowrap;
+}
+
+.productDesc {
+    margin-bottom: 3rem;
+    max-width: 430px;
+}
+
+.btnBuyWrapper {
+    display: flex;
+    align-items: center;
+}
+
+.btnBuy {
+    height: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 2rem;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+}
+
+.productPrice {
+    margin-left: 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
